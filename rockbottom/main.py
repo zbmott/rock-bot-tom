@@ -4,6 +4,11 @@ import discord
 
 import messages
 
+try:
+    from local_settings import DISCORD_TOKEN
+except ImportError:
+    DISCORD_TOKEN = os.environ.get('DISCORD_TOKEN', '')
+
 
 class Client(discord.Client):
     def __init__(self, *pos, **kw):
@@ -58,4 +63,4 @@ intents = discord.Intents.default()
 intents.members = True
 
 client = Client(intents=intents)
-client.run(os.environ['DISCORD_TOKEN'])
+client.run(DISCORD_TOKEN)

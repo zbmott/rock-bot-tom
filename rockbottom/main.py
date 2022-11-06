@@ -15,6 +15,8 @@ class Client(discord.Client):
         print(f"Logged in as {self.user} (ID: {self.user.id})")
         print('-----')
 
+        self.audit_channel = discord.utils.get(client.get_all_channels(), guild__name='Rock Bottom', name='audit-log')
+
     async def update_nickname(self, member, nickname):
         if member.id not in self.awaiting_nickname:
             return
@@ -27,6 +29,7 @@ class Client(discord.Client):
         try:
             await member.edit(nick=nickname)
             await member.send(f"Thanks! I updated your nickname to `{nickname}` for you.")
+            await self.audit_channel.send(f"I updated `{str(member)}'s` nickname to `{nickname}`.")
         except discord.errors.Forbidden:
             pass
 

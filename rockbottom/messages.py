@@ -2,6 +2,9 @@ MESSAGES = {
     'Guest': """
 Welcome to <Rock Bottom>'s Discord server. I'm Tom, I help out around here! To keep things running smoothly, we ask that you **set your Discord nickname to match your in-game character name**. I'm happy to do that for you if you **tell me what your name is**.
     """,
+    'Filthy Degenerate': """
+
+    """,
     'Guild Member': """
 Welcome to the guild! We're excited for you to be here! Let me give you a quick orientation to the way things work.
 

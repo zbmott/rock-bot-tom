@@ -4,10 +4,7 @@ import discord
 
 import messages
 
-try:
-    from local_settings import DISCORD_TOKEN
-except ImportError:
-    DISCORD_TOKEN = os.environ.get('DISCORD_TOKEN', '')
+import settings
 
 
 class Client(discord.Client):
@@ -20,7 +17,7 @@ class Client(discord.Client):
         print(f"Logged in as {self.user} (ID: {self.user.id})")
         print('-----')
 
-        self.audit_channel = discord.utils.get(client.get_all_channels(), guild__name=local_settings.GUILD_NAME, name='audit-log')
+        self.audit_channel = discord.utils.get(client.get_all_channels(), guild__name=settings.GUILD_NAME, name='audit-log')
 
     async def update_nickname(self, member, nickname):
         if member.id not in self.awaiting_nickname:
@@ -63,4 +60,4 @@ intents = discord.Intents.default()
 intents.members = True
 
 client = Client(intents=intents)
-client.run(DISCORD_TOKEN)
+client.run(settings.DISCORD_TOKEN)

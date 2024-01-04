@@ -20,7 +20,7 @@ class Client(discord.Client):
         print(f"Logged in as {self.user} (ID: {self.user.id})")
         print('-----')
 
-        self.audit_channel = discord.utils.get(client.get_all_channels(), guild__name='Rock Bottom', name='audit-log')
+        self.audit_channel = discord.utils.get(client.get_all_channels(), guild__name=local_settings.GUILD_NAME, name='audit-log')
 
     async def update_nickname(self, member, nickname):
         if member.id not in self.awaiting_nickname:

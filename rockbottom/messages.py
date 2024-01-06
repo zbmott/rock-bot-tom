@@ -14,7 +14,7 @@ Finally, please be sure to read `✅｜guild-information` for additional guild r
     'Event Planner': """
 Thanks for stepping up to organize guild events! Now that you're an `Event Planner`, you can interact with `@raid-helper` and manage channels under the `Raid Zone` channel category.
  
-Use `/create` to start the event creation dialogue. Sometimes it's easier to `/copy` an existing event and then `/edit` the date and time. You can find complete documentation at `https://raid-helper.com/commands/`. Feel free to reach out to anyone with the `Clam Police` rank or `Metaslave` if you have questions.
+Use `/create` to start the event creation dialogue. Sometimes it's easier to `/copy` an existing event and then `/edit` the date and time. You can find complete documentation at `https://raid-helper.dev/documentation/commands/`. Feel free to reach out to anyone with the `Clam Police` rank or `Metaslave` if you have questions.
 
 `Event Planners` can coordinate with each other in `#🪖｜organizer-chat`. Please also check the pins in that channel to get an idea of where to put your events.
     """,
